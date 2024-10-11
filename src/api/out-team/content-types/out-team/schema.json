@@ -1,0 +1,66 @@
+{
+  "kind": "singleType",
+  "collectionName": "our_teams",
+  "info": {
+    "singularName": "out-team",
+    "pluralName": "our-teams",
+    "displayName": "Nasz zespół"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Naglowek": {
+      "type": "string"
+    },
+    "Karta1Tytul": {
+      "type": "string"
+    },
+    "Karta1Opis": {
+      "type": "text"
+    },
+    "Karta2Tytul": {
+      "type": "string"
+    },
+    "Karta2Opis": {
+      "type": "text"
+    },
+    "Karta2Zdjecie": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Karta3Tytul": {
+      "type": "string"
+    },
+    "Karta3Opis": {
+      "type": "text"
+    },
+    "Karta3Zdjecie": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Karta1Zdjecie": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

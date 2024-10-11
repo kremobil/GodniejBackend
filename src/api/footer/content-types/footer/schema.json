@@ -1,0 +1,64 @@
+{
+  "kind": "singleType",
+  "collectionName": "footers",
+  "info": {
+    "singularName": "footer",
+    "pluralName": "footers",
+    "displayName": "Stopka"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "NazwaFundacji": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "string"
+    },
+    "Ulica": {
+      "type": "string"
+    },
+    "Miejscowosc": {
+      "type": "string"
+    },
+    "NaglowekSocialMediow": {
+      "type": "string"
+    },
+    "LinkInstagram": {
+      "type": "string"
+    },
+    "LinkFacebook": {
+      "type": "string"
+    },
+    "KRS": {
+      "type": "string"
+    },
+    "NIP": {
+      "type": "string"
+    },
+    "NaglowekWesprzyj": {
+      "type": "string"
+    },
+    "Podziekowanie": {
+      "type": "text"
+    },
+    "NumerKonta": {
+      "type": "string"
+    },
+    "PrzyciskWesprzyj": {
+      "type": "string"
+    }
+  }
+}

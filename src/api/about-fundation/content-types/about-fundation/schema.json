@@ -1,0 +1,53 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_fundations",
+  "info": {
+    "singularName": "about-fundation",
+    "pluralName": "about-fundations",
+    "displayName": "Poznaj Fundacje",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "NaglowekPierwszy": {
+      "type": "string"
+    },
+    "TekstPierwszy": {
+      "type": "blocks"
+    },
+    "ZdjeciePierwsze": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "NaglowekDrugi": {
+      "type": "string"
+    },
+    "TekstDrugi": {
+      "type": "blocks"
+    },
+    "ZdjecieDrugie": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "PrzyciskWesprzyj": {
+      "type": "string"
+    }
+  }
+}

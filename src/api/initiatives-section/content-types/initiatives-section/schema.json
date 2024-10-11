@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "initiatives_sections",
+  "info": {
+    "singularName": "initiatives-section",
+    "pluralName": "initiatives-sections",
+    "displayName": "Sekcja Inicjatyw (Str. gł.)",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Tytul": {
+      "type": "string"
+    },
+    "WyroznionyPost": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::post.post"
+    },
+    "Przycisk": {
+      "type": "string"
+    }
+  }
+}

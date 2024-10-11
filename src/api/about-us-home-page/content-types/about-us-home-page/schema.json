@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_us_home_pages",
+  "info": {
+    "singularName": "about-us-home-page",
+    "pluralName": "about-us-home-pages",
+    "displayName": "Poznaj Fundacje (Str. gł.)",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Naglowek": {
+      "type": "string"
+    },
+    "Opis": {
+      "type": "text"
+    },
+    "PrzyciskGlowny": {
+      "type": "string"
+    },
+    "NaglowekOpinie": {
+      "type": "string"
+    },
+    "Komentarze": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment"
+    }
+  }
+}
