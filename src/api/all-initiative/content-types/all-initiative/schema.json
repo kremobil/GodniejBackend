@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "all_initiatives",
+  "info": {
+    "singularName": "all-initiative",
+    "pluralName": "all-initiatives",
+    "displayName": "Wszystkie inicjatywy",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Naglowek": {
+      "type": "string"
+    },
+    "WyroznionePosty": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::post.post"
+    }
+  }
+}

@@ -557,6 +557,35 @@ export interface ApiAboutUsHomePageAboutUsHomePage
   };
 }
 
+export interface ApiAllInitiativeAllInitiative extends Struct.SingleTypeSchema {
+  collectionName: 'all_initiatives';
+  info: {
+    singularName: 'all-initiative';
+    pluralName: 'all-initiatives';
+    displayName: 'Wszystkie inicjatywy';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Naglowek: Schema.Attribute.String;
+    WyroznionePosty: Schema.Attribute.Relation<'oneToMany', 'api::post.post'>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::all-initiative.all-initiative'
+    >;
+  };
+}
+
 export interface ApiCommentComment extends Struct.CollectionTypeSchema {
   collectionName: 'comments';
   info: {
@@ -818,6 +847,7 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
           preset: 'default';
         }
       >;
+    slug: Schema.Attribute.UID<'Tytul'>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -827,6 +857,47 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::post.post'>;
+  };
+}
+
+export interface ApiSupportSupport extends Struct.SingleTypeSchema {
+  collectionName: 'supports';
+  info: {
+    singularName: 'support';
+    pluralName: 'supports';
+    displayName: 'Zak\u0142adka wesprzyj';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Naglowek: Schema.Attribute.String;
+    PrzyciskOdliczPodatekWlaczony: Schema.Attribute.String;
+    PrzyciskOdliczPodatekWyloczony: Schema.Attribute.String;
+    TrescOdliczPodatek: Schema.Attribute.Text;
+    Kwota1: Schema.Attribute.Integer;
+    Kwota2: Schema.Attribute.Integer;
+    Kwota3: Schema.Attribute.Integer;
+    Kwota4: Schema.Attribute.Integer;
+    PrzyciskInnaKwota: Schema.Attribute.String;
+    PolePodajKwote: Schema.Attribute.String;
+    PrzyciskPlatonosci: Schema.Attribute.String;
+    Odzielenie: Schema.Attribute.String;
+    PrzyciskPrzelewuWloczony: Schema.Attribute.String;
+    PrzyciskPrzelewuWyloczony: Schema.Attribute.String;
+    NumerKonta: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::support.support'
+    >;
   };
 }
 
@@ -1207,6 +1278,7 @@ declare module '@strapi/strapi' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about-fundation.about-fundation': ApiAboutFundationAboutFundation;
       'api::about-us-home-page.about-us-home-page': ApiAboutUsHomePageAboutUsHomePage;
+      'api::all-initiative.all-initiative': ApiAllInitiativeAllInitiative;
       'api::comment.comment': ApiCommentComment;
       'api::contact-form.contact-form': ApiContactFormContactForm;
       'api::footer.footer': ApiFooterFooter;
@@ -1215,6 +1287,7 @@ declare module '@strapi/strapi' {
       'api::initiatives-section.initiatives-section': ApiInitiativesSectionInitiativesSection;
       'api::out-team.out-team': ApiOutTeamOutTeam;
       'api::post.post': ApiPostPost;
+      'api::support.support': ApiSupportSupport;
       'admin::permission': AdminPermission;
       'admin::user': AdminUser;
       'admin::role': AdminRole;
